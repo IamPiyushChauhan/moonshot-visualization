@@ -1,0 +1,9 @@
+# Ignore node_modules in FrontEnd and BackEnd folders
+client/node_modules/
+server/node_modules/
+
+# Ignore .env file in BackEnd folder
+server/.env
+
+# Ignore .DS_Store files created by macOS
+.DS_Store

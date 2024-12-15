@@ -1,0 +1,284 @@
+:root {
+  --main-bg-color: #f8f8f8;
+  --accent-color: #ff894c;
+  --error-color: #dc2f2f;
+  --text-color: #363636;
+}
+
+.App {
+  text-align: center;
+  color:  var(--text-color);
+}
+
+/*--------------------*/
+/*--------------------Login Component-------------*/
+
+.login-container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border: 0.05em solid var(--text-color);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-box {
+  display:  flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 3px;
+  box-sizing: border-box;
+  border-color: var(--text-color);
+}
+
+.input-box input:focus + div {
+  border: 0.5em solid var(--accent-color)
+}
+
+.input-box image {
+  width: 20%;
+}
+
+.input-box input {
+  background-color: var(--main-bg-color);
+  width: 80%;
+  border: none;
+  outline: none;
+}
+
+.input-box input:focus {
+  border: none;
+  outline: none;
+}
+
+.input-box2 {
+  display:  flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 3px;
+  box-sizing: border-box;
+  border-color: var(--text-color);
+  margin: 2%;
+}
+
+.input-box2 input:focus + div {
+  border: 0.5em solid var(--accent-color)
+}
+
+.input-box2 input {
+  background-color: var(--main-bg-color);
+  width: 100%;
+ 
+  border: none;
+  outline: none;
+}
+
+.input-box2 input:focus {
+  border: none;
+  outline: none;
+}
+
+
+.input-box2 select {
+  background-color: var(--main-bg-color);
+  padding: 2%;
+  margin: 2%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.input-box2 select:focus {
+  border: none;
+  outline: none;
+}
+
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5em;
+  border: 0.05em solid var(--text-color);
+  cursor: pointer;
+
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+/*--------------------Login Component-------------*/
+
+
+/*--------------- Navbar Componet---------------------------*/
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  border-bottom: 0.25em solid var(--accent-color);
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-color);
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+      list-style: none;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active  {
+      display: flex;
+  }
+
+}
+/*--------------------Navbar component------------------------*/
+
+/*----------------------------Chart------------*/
+
+.chart-allign {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Adjust this as per your layout needs */
+  align-items: center; /* Adjust this as per your layout needs */
+}
+
+.chart {
+  width: 45%;
+  height: 60%;
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  /* For tablets and smaller screens */
+  .chart-allign {
+    flex-direction: column;
+  }
+  .chart{
+    width: 90%;
+  height: 60%;
+  margin: auto;
+  }
+}
+
+/*--------------Loder ---------------*/
+/*----------lodder*/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+
